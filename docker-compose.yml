@@ -1,0 +1,26 @@
+version: '3.7'
+services:
+  web:
+    build: .
+    volumes:
+      - ./src:/var/www/html
+    ports:
+      - "80:80"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8.0 # Specify a version to ensure compatibility
+    volumes:
+      - db_data:/var/lib/mysql # Database data
+      - ./dat_files:/var/lib/mysql-files # Directory for .dat files
+      - ./data:/docker-entrypoint-initdb.d # Directory for initialization SQL script
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: company
+    ports:
+      - "3306:3306"
+    restart: unless-stopped # Ensure it restarts in case of failures
+
+volumes:
+  db_data:
