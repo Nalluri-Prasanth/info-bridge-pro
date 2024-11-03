@@ -6,7 +6,9 @@ Employee Directory: View detailed information about employees, including their S
 Department Overview: Access details of departments, managers, and associated projects.
 Employee Salaries by Department: List of employees with salary information categorized by department.
 Browse Departments: Navigate through various departments and see assigned projects.
+
 ## File Structure
+```bash
 docker-workspace/
 ├── db_data/                 # MySQL data storage
 ├── src/                     # Source files for the PHP application
@@ -23,7 +25,8 @@ docker-workspace/
 ├── docker-compose.yml       # Docker Compose file to set up services
 ├── Dockerfile               # Dockerfile for PHP and Apache setup
 └── README.md                # Project documentation
-Prerequisites
+```
+## Prerequisites
 Docker: Ensure Docker is installed on your system.
 Docker Compose: Make sure Docker Compose is available for managing multi-container Docker applications.
 ## Setup Instructions
@@ -55,10 +58,6 @@ To load data from `.dat` files, follow these steps:
    docker exec -it <mysql-container-name> mysql -u root -p company < /data/filename.dat
 
 
-Here’s the complete README content you can copy and paste directly:
-
-markdown
-Copy code
 # Info Bridge Pro - Employee Management System
 
 **Info Bridge Pro** is an employee management web application built using PHP, MySQL, and Docker, designed to efficiently manage departments, employees, dependents, projects, and project assignments within an organization.
