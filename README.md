@@ -2,10 +2,12 @@
 Info Bridge Pro is a web-based company management system built using PHP, MySQL, and Docker. The application allows users to view and manage company-related information, including employees, departments, projects, and more. The project is designed to run within Docker containers to streamline deployment and setup.
 
 ## Project Features
-Employee Directory: View detailed information about employees, including their SSN, name, address, department, and salary.
-Department Overview: Access details of departments, managers, and associated projects.
-Employee Salaries by Department: List of employees with salary information categorized by department.
-Browse Departments: Navigate through various departments and see assigned projects.
+This project is structured in a Docker environment, with a MySQL database backend and PHP for the server-side scripting. The main features include:
+- **Employee Directory**: List all employees with details.
+- **Department Overview**: View department-specific information.
+- **Employee Salaries by Department**: Visualize employee salaries organized by department.
+- **Browse Departments**: Navigate through different departments.
+
 
 ## File Structure
 ```bash
@@ -29,6 +31,12 @@ docker-workspace/
 ## Prerequisites
 Docker: Ensure Docker is installed on your system.
 Docker Compose: Make sure Docker Compose is available for managing multi-container Docker applications.
+## Technologies Used
+PHP: Server-side language for dynamic page rendering.
+MySQL: Database for storing organizational data.
+Docker: Containerization tool to deploy the app consistently.
+Bootstrap: Frontend framework for responsive design.
+
 ## Setup Instructions
 
 1. **Clone the repository**:
@@ -56,20 +64,7 @@ To load data from `.dat` files, follow these steps:
 2. Use the MySQL command line within the Docker container:
    ```bash
    docker exec -it <mysql-container-name> mysql -u root -p company < /data/filename.dat
-
-
-# Info Bridge Pro - Employee Management System
-
-**Info Bridge Pro** is an employee management web application built using PHP, MySQL, and Docker, designed to efficiently manage departments, employees, dependents, projects, and project assignments within an organization.
-
-## Project Overview
-
-This project is structured in a Docker environment, with a MySQL database backend and PHP for the server-side scripting. The main features include:
-- **Employee Directory**: List all employees with details.
-- **Department Overview**: View department-specific information.
-- **Employee Salaries by Department**: Visualize employee salaries organized by department.
-- **Browse Departments**: Navigate through different departments.
-
+   ```
 ## File Structure
 
 - `src/`: Contains all PHP files for different functionalities of the system.
@@ -113,12 +108,6 @@ To load data from `.dat` files, follow these steps:
    ```bash
    docker exec -it <mysql-container-name> mysql -u root -p company < /data/filename.dat
 Replace <mysql-container-name> with your container's name and filename.dat with your data file.
-
-## Technologies Used
-PHP: Server-side language for dynamic page rendering.
-MySQL: Database for storing organizational data.
-Docker: Containerization tool to deploy the app consistently.
-Bootstrap: Frontend framework for responsive design.
 
 ## Demo Link
 https://www.youtube.com/watch?v=0k1FNOR7WXk&nbsp;
